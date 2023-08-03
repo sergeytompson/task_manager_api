@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  web:
+    build: ./task_manager
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./task_manager:/usr/src/task_manager
+    depends_on:
+      - db
+    env_file:
+      - task_manager/.env
+
+  postgres:
+    image: postgres:15
+    env_file:
+      - task_manager/.env
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pg-data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
