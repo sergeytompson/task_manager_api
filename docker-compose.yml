@@ -12,7 +12,7 @@ services:
     environment:
       - SERVER_PORT:8000
 
-  postgres:
+  db:
     image: postgres:15
     env_file:
       - task_manager/.env
