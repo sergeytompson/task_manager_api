@@ -9,8 +9,8 @@ services:
       - ./task_manager:/usr/src/task_manager
     depends_on:
       - db
-    env_file:
-      - task_manager/.env
+    environment:
+      - SERVER_PORT:8000
 
   postgres:
     image: postgres:15

@@ -4,10 +4,7 @@ from task_api.managers import SortTaskByDateTimeManager
 
 
 class Task(models.Model):
-    title = models.CharField(
-        "заголовок",
-        max_length=255
-    )
+    title = models.CharField("заголовок", max_length=255)
     description = models.TextField(
         "описание задачи",
     )

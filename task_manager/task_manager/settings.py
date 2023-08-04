@@ -11,7 +11,11 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = True
 
-ALLOWED_HOSTS = [os.getenv("SERVER_HOST", "localhost"), "127.0.0.1"]
+ALLOWED_HOSTS = [
+    os.getenv("SERVER_HOST", "localhost"),
+    "127.0.0.1",
+    "0.0.0.0",
+]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -27,8 +31,7 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS':
-    ('django_filters.rest_framework.DjangoFilterBackend',),
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
 }
 
 MIDDLEWARE = [

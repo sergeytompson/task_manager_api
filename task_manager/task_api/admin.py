@@ -15,18 +15,12 @@ class TaskAdmin(admin.ModelAdmin):
         "pk",
         "title",
     )
-    search_fields = (
-        "title",
-    )
+    search_fields = ("title",)
     fields = (
         "title",
         "description",
         "completed",
         "created_at",
     )
-    readonly_fields = (
-        "created_at",
-    )
-    list_editable = (
-        "completed",
-    )
+    readonly_fields = ("created_at",)
+    list_editable = ("completed",)
