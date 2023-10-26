@@ -1,5 +1,5 @@
 command = '/home/sergey/code/task_manager/venv/bin/gunicorn'
-pythonpath = '/home/www/code/task_manager/task_manager'
+pythonpath = '/home/sergey/code/task_manager'
 bind = '127.0.0.1:8007'
 workers = 3
 user = 'sergey'
