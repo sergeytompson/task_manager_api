@@ -1,6 +1,6 @@
 command = '/home/sergey/code/task_manager/venv/bin/gunicorn'
 pythonpath = '/home/sergey/code/task_manager'
-bind = '127.0.0.1:8007'
+bind = '127.0.0.1:8000'
 workers = 3
 user = 'sergey'
 limit_request_fields = 32000
