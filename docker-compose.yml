@@ -15,6 +15,17 @@ services:
       - media:/usr/src/media/
     environment:
       - SERVER_PORT:8000
+    depends_on:
+      - db
+
+  sergey-db:
+    image: postgres:15
+    env_file:
+      - task_manager/.env
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pg-data:/var/lib/postgresql/data
 
   sergey-nginx:
     image: nginx:1.21.3-alpine
@@ -29,6 +40,7 @@ services:
       - sergey-web
 
 volumes:
+  pg-data:
   staticfiles:
   media:
 
